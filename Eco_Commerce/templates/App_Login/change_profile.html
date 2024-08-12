@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block title_block %} Profile  {% endblock title_block %}
+<!-- css -->
+{% block css_block %}
+   <style>
+    .profile{
+        width: 550px;
+        margin: auto;
+        border: 3px solid rgba(21, 94, 118, 0.806);
+        padding: 40px;
+    }
+    .profile form button{
+        width: 100%;
+        background-color: rgba(21, 94, 118, 0.806);
+        color: azure;
+    }
+    .profile h3{
+        text-align: center;
+        color: rgba(21, 94, 118, 0.806);
+        padding-bottom: 20px;
+        text-decoration: underline;
+    }
+   </style> 
+{% endblock css_block %}
+{% block body_block %}
+<div class="profile">
+<h3>Update Your Profile</h3>
+<form method="POST">
+{{form|crispy}}
+{% csrf_token %}
+<button type="submit" class="btn btn-lg btn-warning">Save</button>
+</form>
+</div>
+
+{% endblock %}
