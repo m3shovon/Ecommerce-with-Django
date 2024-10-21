@@ -32,7 +32,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'crispy_forms', 'crispy_bootstrap4',
-    'App_Login', 'App_Shop', 'App_Order', 'App_Payment', 'App_UserLog',
+    'App_Login', 'App_Shop', 'App_Order', 'App_Payment',
+    #  'App_UserLog',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -77,14 +78,14 @@ WSGI_APPLICATION = 'Eco_Commerce.wsgi.application'
 
 DATABASES = {
     'default': {
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': BASE_DIR / 'db.sqlite3',
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'eco_commerce',
-        'HOST': 'localhost',
-        'PORT': '3306',
-        'USER': 'root',
-        'PASSWORD': '',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+        # 'ENGINE': 'django.db.backends.mysql',
+        # 'NAME': 'eco_commerce',
+        # 'HOST': 'localhost',
+        # 'PORT': '3306',
+        # 'USER': 'root',
+        # 'PASSWORD': '',
     }
 }
 
